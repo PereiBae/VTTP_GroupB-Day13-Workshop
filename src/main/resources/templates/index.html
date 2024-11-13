@@ -11,7 +11,7 @@
 <div class="container my-5">
   <h1 class="text-center mb-4">Add New Address Book Entry</h1>
 
-  <form method="POST" th:action="@{/contact}" th:object="${person}" class="card p-4 shadow-sm">
+  <form method="POST" th:action="@{/contact/create}" th:object="${person}" class="card p-4 shadow-sm">
     <!-- Name Field -->
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>

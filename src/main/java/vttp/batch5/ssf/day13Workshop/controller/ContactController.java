@@ -65,7 +65,7 @@ public class ContactController {
     @PostMapping("/contact/create")
     public String createContact(@Validated Person person, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
-            return "contacts"; // Return to contacts page if there are validation errors
+            return "contacts"; // Redirect to contacts page if validation fails
         }
 
         String id = UUID.randomUUID().toString().substring(0, 8);
@@ -79,7 +79,7 @@ public class ContactController {
             return "contacts";
         }
 
-        return "success"; // Render success.html with the contact ID and success message
+        return "success"; // View name that should match success.html
     }
 
 }

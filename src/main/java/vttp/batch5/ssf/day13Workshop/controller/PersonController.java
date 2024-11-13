@@ -30,7 +30,7 @@ public class PersonController {
         return "index"; // This should match the HTML file name without the .html extension
     }
 
-    @PostMapping("/contact")
+    /* @PostMapping("/contact")
     public ResponseEntity<String> submitForm(@Valid Person person, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity<>("Invalid input, please correct and try again.", HttpStatus.BAD_REQUEST);
@@ -47,5 +47,5 @@ public class PersonController {
         // Return Created response with a message
         String message = "Contact created successfully with ID: " + id;
         return new ResponseEntity<>(message, HttpStatus.CREATED);
-    }
+    } */
 }
